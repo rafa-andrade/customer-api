@@ -1,0 +1,16 @@
+server:
+  port: 9090
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+
+zipcode:
+  ribbon:
+    eureka:
+      enabled: false
+    DeploymentContextBasedVipAddresses: zip-code-api
